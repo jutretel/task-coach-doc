@@ -1,0 +1,89 @@
+\newenvironment{funcionalidade}[1]
+%ANTES
+{
+	% ---
+	% DESCRIÇÃO
+	% ---
+	\newcommand{\descricao}[1]{
+		\index{Descrição}
+		\section{Descrição}
+
+		##1
+	}
+
+	% ---
+	% IMPORTÂNCIA
+	% ---
+	%alta
+	%media
+	%baixa
+	\newcommand{\importancia}[1]{
+		\index{Importância}
+		\textbf{Importância:} 
+		\ifstrequal{##1}{alta}{\colorbox{red}{\color{white}\textbf{Alta}}}{}
+		\ifstrequal{##1}{media}{\colorbox{yellow}{\textbf{Média}}}{}
+		\ifstrequal{##1}{baixa}{Baixa}{}
+	}
+
+	% ---
+	% Condições
+	% ---
+
+	% \condicao{pre}{pos}
+
+	\newcommand{\condicao}[2]{
+		\index{Condições}
+		\section{Condições}
+		
+		\begin{table}[htb]
+			\ABNTEXfontereduzida
+
+			\begin{tabular}{ p{3cm}  p{12cm} }
+				\hline \\
+				\textbf{Pré-Condições} & ##1 \\
+				\textbf{Pós-Condições} & ##2 \\
+				\\ \hline
+			\end{tabular}
+			\caption[Condições da Funcionalidade #1]{Condições da Funcionalidade #1}
+		\end{table}
+	}
+
+	% ---
+	% FLUXO
+	% ---
+	\newenvironment{fluxo}[0]
+	%ANTES
+	{
+		\newcommand{\f}[0]{
+			\item 
+		}
+
+		\newcommand{\subf}[0]{
+			\begin{enumerate}
+		}
+
+		\newcommand{\voltaf}[0]{
+			\end{enumerate}
+		}
+
+		\section{Fluxo de Execução}
+		\index{Fluxo de Execução}
+		\begin{enumerate}
+	}
+	%DEPOIS
+	{
+		\end{enumerate}
+	}
+
+	\newcommand{\atores}[1]{
+		\index{Atores}
+		\section{Atores}
+		##1
+	}
+
+	\chapter{#1}
+}
+%DEPOIS
+{
+
+}

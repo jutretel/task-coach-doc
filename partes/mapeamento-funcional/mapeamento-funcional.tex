@@ -1,0 +1,97 @@
+\part{Mapeamento Funcional}
+
+% ---
+% CRIAR NOVA TAREFA
+% ---
+\begin{funcionalidade}{Criar nova tarefa}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode criar uma nova tarefa e atribuir características a ela: nome, prioridade, datas (início, prazo, datas reais de início e conclusão, lembretes). Pode adicionar também outras tarefas como pré-requisitos, adicionar uma porcentagem de andamento, adicionar a tarefa a uma categoria, adicionar um orçamento, notas, anexos e alterar a aparência da tarefa.}
+
+	%--------------------------------------------------
+	\importancia{alta}
+
+	%--------------------------------------------------
+	\condicao
+	{Não tem pré-condições.} %pré-condição
+	{Uma nova tarefa é adicionada ao projeto.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal do programa, clicar no ícone de nova tarefa;
+			\subf
+			\f Uma nova tarefa também poderá ser adicionada clicando no botão INSERT do teclado;
+			\voltaf
+		\f Uma nova janela irá abrir, com diversas abas para edição da nova tarea;
+		\f Após adicionar todas as informações, clicar em Fechar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% EDITAR TAREFA
+% ---
+\begin{funcionalidade}{Editar Tarefa}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode selecionar uma tarefa existente e editar as características dela.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Devem existir tarefas posteriormente criadas.} %pré-condição
+	{A tarefa selecionada agora terá as novas características.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, onde todas as tarefas estão sendo listadas, selecionar uma das tarefas;
+		\f Clicar no botão de edição logo acima da lista de tarefas;
+			\subf
+			\f A opção de edição poderá ser aberta com um duplo clique na tarefa desejada;
+			\voltaf
+		\f Uma nova janela será aberta com as opões de edição;
+		\f Depois de alterar a tarefa, clicar em Fechar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Criar novo subitem tarefa
+% ---
+
+\begin{funcionalidade}{Criar subtarefas}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode criar subtarefas em outras tarefas principais.}
+
+	%--------------------------------------------------
+	\importancia{alta}
+
+	%--------------------------------------------------
+	\condicao
+	{Devem existir tarefas principais para adicinar subitens.} %pré-condição
+	{Um novo subitem será criado relacionado a tarefa ou subtarefa principal.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, selecionar a tarefa ou subtarefa que será relacionada ao novo subitem;
+		\f Clicar no ícone de novo subitem logo acima da lista de tarefas;
+			\subf
+			\f Um novo subitem também poderá ser adicionado através do comando CRTL+SHIFT+N;		
+			\voltaf
+		\f Uma nova janela será aberta com as características do novo subitem;
+		\f Após atribuir as características do subitem, clicar em Fechar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
