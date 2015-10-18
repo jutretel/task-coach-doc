@@ -57,6 +57,17 @@
 	\newenvironment{fluxo}[0]
 	%ANTES
 	{
+
+		% --
+		% esses dois renewcommand são para enumerar 	1.
+							%		1.1
+							%		1.2
+							%	2.
+
+		\renewcommand{\labelenumii}{\theenumii}
+		\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+		% ---------------------------------------------------
+
 		\newcommand{\f}[0]{
 			\item 
 		}
