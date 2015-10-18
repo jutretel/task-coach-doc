@@ -1,3 +1,6 @@
+%cinza pro baixa importancia
+\definecolor{gray}{gray}{0.75}
+
 \newenvironment{funcionalidade}[1]
 %ANTES
 {
@@ -22,7 +25,7 @@
 		\textbf{Importância:} 
 		\ifstrequal{##1}{alta}{\colorbox{red}{\color{white}\textbf{Alta}}}{}
 		\ifstrequal{##1}{media}{\colorbox{yellow}{\textbf{Média}}}{}
-		\ifstrequal{##1}{baixa}{Baixa}{}
+		\ifstrequal{##1}{baixa}{\colorbox{gray}{Baixa}}{}
 	}
 
 	% ---

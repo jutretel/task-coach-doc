@@ -66,7 +66,6 @@
 % ---
 % Criar novo subitem tarefa
 % ---
-
 \begin{funcionalidade}{Criar subtarefas}
 
 	%--------------------------------------------------
@@ -95,3 +94,194 @@
 	\atores{Apenas o usuário.}
 
 \end{funcionalidade}
+
+% ---
+% Excluir Tarefa
+% ---
+\begin{funcionalidade}{Excluir subtarefa}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá excluir tarefas.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Devem existir tarefas para serem excluídas.} %pré-condição
+	{A tarefa selecionada deixará de existir no projeto do usuário.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, selecionar a tarefa a ser excluída;
+		\f Clicar no ícone de exclusão;
+			\subf
+			\f A tarefa também poderá ser excluída ao clicar o botão de DELETE no teclado.
+			\voltaf
+		\f Se a tarefa possuir subitens, todos serão excluídos após a ação.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+
+% ---
+% Salvar projeto
+% ---
+\begin{funcionalidade}{Salvar Projeto}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá salvar seus projetos contendo uma lista de tarefas.}
+
+	%--------------------------------------------------
+	\importancia{alta}
+
+	%--------------------------------------------------
+	\condicao
+	{O usuário deve ter alterado ou criado um projeto para salvar.} %pré-condição
+	{Se o projeto for novo, um novo arquivo será adicionado na pasta selecionada pelo usuário. Se o projeto já existir, as alterações feitas pelo usuário serão salvas no mesmo arquivo (ou num novo arquivo).} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Com o projeto aberto, ir no menu Arquivo, no canto superior esquerdo;
+		\f Selecionar:
+			\subf
+			\f Salvar, caso seja um novo projeto ou um projeto que foi alterado;
+			\f Salvar como, caso o usuário tenha alterado um projeto e queira salvar em um novo arquivo;
+			\voltaf
+		\f Caso o projeto seja novo ou o usuário tenha selecionado Salvar Como, uma nova janela abrirá;
+		\f Escolher o nome do projeto;
+		\f Escolher a pasta onde deseja-se salvar o projeto;
+		\f Clicar em Salvar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+
+% ---
+% Abrir projeto
+% ---
+\begin{funcionalidade}{Criar subtarefas}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá abrir um projeto existente para alterá-lo ou ver suas caracteristicas.}
+
+	%--------------------------------------------------
+	\importancia{alta}
+
+	%--------------------------------------------------
+	\condicao
+	{É necessário existir um projeto para abri-lo.} %pré-condição
+	{O projeto selecionado pelo usuário abrirá na tela principal.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, ir no menu Arquivo e selecionar a opção Abrir;
+			\subf
+			\f O usuário poderá abrir um projeto clicando no ícone de abrir na tela principal;
+			\voltaf
+		\f Selecionar a pasta onde se encontra o projeto a ser aberto;
+		\f Selecionar o projeto;
+		\f Clicar em Abrir.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% IMPRIMIR PROJETO
+% ---
+\begin{funcionalidade}{Imprimir Projeto}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá imprimir uma lista com as tarefas de um projeto.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter uma impressora conectada ao computador, ter um projeto aberto.} %pré-condição
+	{O usuário terá em mãos um documento com a lista de tarefas criadas no projeto, ele também poderá salvar o arquivo que foi impresso como pdf.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, selecionar o ícone de impressão;
+		\f Uma nova janela será aberta com opções de impressão;
+			\subf 
+			\f Se o usuário desejar salvar o arquivo impresso, marcar a caixa de Print to File;
+			\voltaf 
+		\f Depois de configurar a impressão, apertar em Ok.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário e impressora.}
+
+\end{funcionalidade}
+
+
+% ---
+% Criar nova categoria
+% ---
+\begin{funcionalidade}{Criar Nova Categoria}
+
+	%--------------------------------------------------
+	\descricao{Uma nova categoria passará a existir e as tarefas poderão ser associadas a ela.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Não tem pré-condições.} %pré-condição
+	{Uma nova categoria passará a existir e as tarefas poderão ser associadas a ela.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na janela principal, no lado direito da tela, existe a coluna de categorias;
+		\f Selecionar o ícone de nova categoria;
+		\f Uma nova janela abrirá com as opções de características da categoria;
+		\f Clicar em Fechar quando os detalhes forem preenchidos.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+\end{funcionalidade}
+
+
+% ---
+% Criar novo subitem de categoria
+% ---
+\begin{funcionalidade}{Criar Subcategoria}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá subdividir as categorias em subitens.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter pelo menos uma categoria já criada.} %pré-condição
+	{Uma nova subcategoria será criada e poderá ter tarefas associadas a ela.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, no lado direito, selecionar uma categoria como principal;
+		\f Clicar no botão de novo subitem;
+		\f Descrever o novo subitem na janela que aparecer;
+		\f Clicar em Fechar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
