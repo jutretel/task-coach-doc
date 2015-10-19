@@ -285,3 +285,100 @@
 
 \end{funcionalidade}
 
+% ---
+% Editar Categoria
+% ---
+\begin{funcionalidade}{Editar Categoria}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá editar os detalhes de uma categoria.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter pelo menos uma categoria já criada.} %pré-condição
+	{A categoria selecionada terá suas características alteradas.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, no lado direito, selecionar uma categoria;
+		\f Clicar no botão de edição;
+			\subf 
+			\f A edição poderá ser feita com um duplo clique na categoria desejada;
+			\voltaf
+		\f Uma nova janela abrirá, com os detalhes da categoria selecionada;
+		\f Alterar as características desejadas;
+		\f Clicar em Fechar.
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Excluir categoria
+% ---
+\begin{funcionalidade}{Excluir Categoria}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá excluir uma categoria.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter pelo menos uma categoria já criada.} %pré-condição
+	{A categoria selecionada e suas subcategorias deixarão de existir e todas as tarefas associadas à categoria ficarão sem categoria.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, no lado direito, selecionar uma categoria;
+		\f Clicar no botão de excluir;
+			\subf 
+			\f A exclusão poderá ser feita com o botão DELETE;
+			\voltaf
+		\f A categoria e todas suas subcategorias deixarão de existir;
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+\begin{funcionalidade}{Pesquisar Categoria}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá pesquisar por uma categoria que deseja encontrar mais fácil.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter categorias criadas.} %pré-condição
+	{Se a pesquisa corresponder a uma categoria existente, ela aparecerá, na lista, em primeiro.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, no lado direito, clicar no campo de texto com a lupa à esquerda;
+		\f Cliclando na lupa, outras opções de pesquisa aparecerão;
+			\subf 
+			\f Procurar apenas por categorias;
+			\f Procurar diferenciando maiúsculas de minúsculas ;
+			\f Incluir subitens na pesquisa;
+			\f Procurar por descrições;
+			\f Procurar por expressão regular;
+			\voltaf
+		\f As categorias encontradas aparecerão na tela;
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
