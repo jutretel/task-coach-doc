@@ -61,6 +61,7 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{caption}			% usado para alterar o tamanho da legenda
+\usepackage{makeidx} 			% index
 % ---
 % ---
 % Pacotes adicionais, usados no anexo do modelo de folha de identificação
@@ -148,7 +149,7 @@ como requisito parcial para aprovação.}
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{relatório técnico}, 
+	    pdfkeywords={abnt}{latex}{abntex}{abntex2}{task coach}{documentação}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -282,6 +283,13 @@ como requisito parcial para aprovação.}
 %\chapter*[Introdução]{Introdução}
 %\addcontentsline{toc}{chapter}{Introdução}
 
+% ---
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ---
+\phantompart
+
 % ----------------------------------------------------------
 % PARTES DA DOCUMENTAÇÃO
 % ----------------------------------------------------------
@@ -290,13 +298,6 @@ como requisito parcial para aprovação.}
 %\include{./partes/diagrama-de-classes/diagrama-de-classes}
 %\include{./partes/diagrama-de-entidade-relacionamento/diagrama-de-entidade-relacionamento}
 %\include{./partes/diagrama-de-atividade/diagrama-de-atividade}
-
-% ---
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ---
-\phantompart
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
