@@ -149,9 +149,10 @@
 		\f Selecionar:
 			\subf
 			\f Salvar, caso seja um novo projeto ou um projeto que foi alterado;
-			\f Salvar como, caso o usuário tenha alterado um projeto e queira salvar em um novo arquivo;
+			\f Salvar como, caso o usuário tenha alterado um projeto e queira criar um novo arquivo e alterar o atual;
+			\f Salvar tarefas selecionadas para novo arquivo de tarefas, caso queira criar um novo arquivo contendo algumas tarefas (mais de uma tarefa poderá ser selecionada segurando a tecla CTRL ao clicar);
 			\voltaf
-		\f Caso o projeto seja novo ou o usuário tenha selecionado Salvar Como, uma nova janela abrirá;
+		\f Caso o projeto seja novo ou o usuário tenha selecionado Salvar Como ou Salvar Tarefas Selecionadas, uma nova janela abrirá;
 		\f Escolher o nome do projeto;
 		\f Escolher a pasta onde deseja-se salvar o projeto;
 		\f Clicar em Salvar.
@@ -214,6 +215,8 @@
 	%--------------------------------------------------
 	\begin{fluxo}
 		\f Na tela principal, selecionar o ícone de impressão;
+			\subf
+			\f A impressão será feita de acordo com a visualização atual, podendo ser: uma lista de tarefas, esforço agrupado por mês, colunas visíveis, ordem de classificação, tarefas filtradas, etc;
 		\f Uma nova janela será aberta com opções de impressão;
 			\subf 
 			\f Se o usuário desejar salvar o arquivo impresso, marcar a caixa de Print to File;
@@ -375,6 +378,121 @@
 			\f Procurar por expressão regular;
 			\voltaf
 		\f As categorias encontradas aparecerão na tela;
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+\begin{funcionalidade}{Mesclar Projetos}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá juntar dois projetos.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter dois projetos salvos.} %pré-condição
+	{O projeto aberto receberá as informações do projeto escolhido para mesclar.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Abrir um projeto ou ter feito alterações num novo projeto;
+		\f Na tela principal, clicar no menu Arquivo;
+		\f Escolher a opção Mesclar;
+		\f Uma nova janela abrirá com as pastas do computador, para selecionar o segundo projeto (que se deseja mesclar com o atual);
+		\f Clicar em OK.
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+\begin{funcionalidade}{Importar Projetos}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá importar tarefas de outros tipos de arquivos (como txt e CSV).}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter arquivo no formato válido para importação.} %pré-condição
+	{O projeto aberto receberá as informações do arquivo escolhido para importar tarefas.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Na tela principal, clicar no menu Arquivo;
+		\f Escolher a opção Importar e a extensão do arquivo que será importado;
+		\f Uma nova janela abrirá com as pastas do computador, para selecionar o arquivo a ser importado;
+			\subf
+			\f No caso de txt, cada linha do arquivo será convertido em uma tarefa;
+			\voltaf
+		\f Clicar em OK.
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+
+\begin{funcionalidade}{Exportar Projetos}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá exportar seus projetos para outro formato de arquivo.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter um projeto.} %pré-condição
+	{Será criado um novo arquivo com outra extensão contendo as informações do projeto.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Ter um projeto aberto;
+		\f Na tela principal, clicar no menu Arquivo;
+		\f Escolher a opção Exportar e a extensão para qual se deseja exportar;
+		\f Uma nova janela abrirá com as pastas do computador, para selecionar o local onde o novo arquivo será salvo;
+		\f Clicar em OK.
+
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+
+\begin{funcionalidade}{Desfazer/Refazer Ações}
+
+	%--------------------------------------------------
+	\descricao{O usuário poderá desfazer ou refazer ações.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Ter realizado ações.} %pré-condição
+	{No caso de desfazer: a última ação realizada será desfeita. No caso de refazer: a ultima ação desfeita será refeita.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No alto da tela principal, clicar no ícone de desfazer;
+			\subf
+			\f Caso a ação desfeita queira ser refeita, clicar no ícone de refazer.
+			\voltaf
 
 	\end{fluxo}
 
