@@ -741,9 +741,7 @@
 
 	%--------------------------------------------------
 	\condicao
-	{
-		Existir uma tarefa;\newline
-	} %pré-condição
+	{Existir uma tarefa;} %pré-condição
 	{Valores de orçamento opcionalmente atualizados} %pós-condição 
 
 	%--------------------------------------------------
@@ -752,6 +750,99 @@
 			\subf
 			\f Os valores serão mostrados;
 			\f Clicar na caixa do valor se o usuário quiser alterar.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Inserir Notas em Tarefas e em Categorias
+% ---
+\begin{funcionalidade}{Inserir Notas em Tarefas e em Categorias}
+
+	%--------------------------------------------------
+	\descricao{Cria notas podendo associadas a tarefas ou a categorias.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Existir uma tarefa ou categoria.} %pré-condição
+	{Uma nota é criada, podendo podendo estar ou não associado a uma tarefa ou categoria. Posteriormente a mesma nota criada pode ser associada a tarefas e categorias.} %pós-condição 
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa ou categoria selecionar a aba "Notas";
+			\subf
+			\f Inserir o assunto;
+			\f Inserir e a descrição.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Inserir Anexo a Tarefas e em Categorias
+% ---
+\begin{funcionalidade}{Inserir Anexo a Tarefas e em Categorias}
+
+	%--------------------------------------------------
+	\descricao{Cria anexos(\textit{arquivos de qualquer formato}) e associa-os com tarefas, categorias ou até mesmo notas.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Existir uma tarefa ou categoria;} %pré-condição
+	{Um arquivo é associado e anexado ao projeto.} %pós-condição 
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa ou categoria selecionar a aba "Anexos";
+			\subf
+			\f Inserir o assunto;
+			\f Inserir o local do arquivo;
+			\f Inserir e a descrição.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Alterar a Aparência da Tarefa ou Categoria
+% ---
+\begin{funcionalidade}{Alterar a Aparência da Tarefa ou Categoria}
+
+	%--------------------------------------------------
+	\descricao{Altera a cor padrão, cor de fundo, fonte e ícone que a tarefa ou categoria vai aparecer nas listas.}
+
+	%--------------------------------------------------
+	\importancia{baixa}
+
+	%--------------------------------------------------
+	\condicao
+	{Uma tarefa ou categoria deverá existir;} %pré-condição
+	{O estilo padrão da tarefa ou categoria é alterada. Toda vez que a tarefa ou categoria for avistada, vai ser com o esquema escolhido.} %pós-condição 
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa ou categoria selecionar a aba "Aparência";
+			\subf
+			\f Escolher cor de primeiro plano;
+			\f Escolher cor de plano de fundo;
+			\f Escolher fonte;
+			\f Escolher ícone.
 			\voltaf
 	\end{fluxo}
 
