@@ -587,3 +587,175 @@
 	\atores{Apenas o usuário.}
 
 \end{funcionalidade}
+
+% ---
+% Alterar data da tarefa
+% ---
+\begin{funcionalidade}{Alterar Datas da Tarefa}
+
+	%--------------------------------------------------
+	\descricao{Altera as datas de uma tarefa. As datas que podem ser alteradas são:
+
+		\begin{itemize}
+			\item Data de início planejada;
+			\item Prazo para a conclusão;
+			\item Data real de início;
+			\item Data de conclusão.
+		\end{itemize}
+	}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Existir uma tarefa;} %pré-condição
+	{Datas são registradas para um melhor monitoramento do projeto.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa selecionar a aba "Datas";
+			\subf
+			\f Clicar na data em que deseja alterar ou incluir;
+			\f Escolher o dia e o horário.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Selecionar pré-requisitos
+% ---
+\begin{funcionalidade}{Selecionar pré-requisitos}
+
+	%--------------------------------------------------
+	\descricao{Adiciona tarefas que são dependência da tarefa atual selecionada.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{
+		Existir uma tarefa;\newline
+		Existir uma ou mais tarefas que serão dependência.	
+	} %pré-condição
+	{A tarefa que agora terá dependência será desfocada, enquanto o enfoque se torna apenas as tarefas que não tem nenhuma dependência aberta.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa selecionar a aba "Pré-requisitos";
+			\subf
+			\f Selecionar a tarefa que será pré-requisitada.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Alterar Andamento
+% ---
+\begin{funcionalidade}{Alterar Andamento da Tarefa}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode alterar o andamento da tarefa.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Existir uma tarefa.} %pré-condição
+	{Um andamento será adicionado a tarefa, para um melhor controle e análise do progresso do projeto.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa selecionar a aba "Andamento";
+			\subf
+			\f Inserir no campo "Porcentagem Completa" de [0,100] o quão completa a tarefa está.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Inserir Tarefa em uma ou mais Categorias
+% ---
+\begin{funcionalidade}{Inserir Tarefa em uma ou mais Categorias}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode inserir uma tarefa em uma categoria preexistente.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{
+		Existir uma tarefa;\newline
+		Existir a categoria;
+	} %pré-condição
+	{A tarefa será classificada na categoria escolhida, para posteriormente a análise organizada em categoria ser possível.} %pós-condição 
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa selecionar a aba "Categoria";
+			\subf
+			\f Escolher uma ou mais categoria entre as categorias já criadas.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Alterar e Visualizar Valores de Orçamento
+% ---
+\begin{funcionalidade}{Alterar e Visualizar Valores de Orçamento}
+
+	%--------------------------------------------------
+	\descricao{O usuário pode alterar e visualizar valores de orçamento como:
+		\begin{itemize}
+				\item Orçamento do projeto;
+				\item Tempo gasto (baseado na funcionalidade esforço);
+				\item Orçamento baixo;
+				\item Taxa horária;
+				\item Taxa fixada;
+				\item Receita;
+		\end{itemize}
+	}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{
+		Existir uma tarefa;\newline
+	} %pré-condição
+	{Valores de orçamento opcionalmente atualizados} %pós-condição 
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f No menu da tarefa selecionar a aba "Orçamento";
+			\subf
+			\f Os valores serão mostrados;
+			\f Clicar na caixa do valor se o usuário quiser alterar.
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
