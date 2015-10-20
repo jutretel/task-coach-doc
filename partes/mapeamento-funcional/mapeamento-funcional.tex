@@ -217,6 +217,7 @@
 		\f Na tela principal, selecionar o ícone de impressão;
 			\subf
 			\f A impressão será feita de acordo com a visualização atual, podendo ser: uma lista de tarefas, esforço agrupado por mês, colunas visíveis, ordem de classificação, tarefas filtradas, etc;
+			\voltaf
 		\f Uma nova janela será aberta com opções de impressão;
 			\subf 
 			\f Se o usuário desejar salvar o arquivo impresso, marcar a caixa de Print to File;
@@ -353,6 +354,9 @@
 
 \end{funcionalidade}
 
+% ---
+% Pesquisar Categoria
+% ---
 \begin{funcionalidade}{Pesquisar Categoria}
 
 	%--------------------------------------------------
@@ -386,6 +390,9 @@
 
 \end{funcionalidade}
 
+% ---
+% Mesclar Projetos
+% ---
 \begin{funcionalidade}{Mesclar Projetos}
 
 	%--------------------------------------------------
@@ -414,6 +421,9 @@
 
 \end{funcionalidade}
 
+% ---
+% Importar projetos
+% ---
 \begin{funcionalidade}{Importar Projetos}
 
 	%--------------------------------------------------
@@ -444,7 +454,9 @@
 
 \end{funcionalidade}
 
-
+% ---
+% Exportar projetos
+% ---
 \begin{funcionalidade}{Exportar Projetos}
 
 	%--------------------------------------------------
@@ -473,7 +485,9 @@
 
 \end{funcionalidade}
 
-
+% ---
+% Desfazer/Refazer Ações
+% ---
 \begin{funcionalidade}{Desfazer/Refazer Ações}
 
 	%--------------------------------------------------
@@ -494,6 +508,79 @@
 			\f Caso a ação desfeita queira ser refeita, clicar no ícone de refazer.
 			\voltaf
 
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Iniciar monitoramento de esforço
+% ---
+\begin{funcionalidade}{Iniciar Monitoramento de Esforço}
+
+	%--------------------------------------------------
+	\descricao{O usuário registra o tempo de esforço que ele está realizando para tal tarefa. Em um contexto ideal, seus esforços em cada tarefa seriam registrados e monitorados, para uma posterior análise de desempenho de produtividade. Também mostra o tempo decorrido desde o início do esforço.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{Existir uma tarefa;} %pré-condição
+	{Registro de data (dia, mês e horário) do início do esforço.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Há uma tarefa na qual o usuário deseja trabalhar;
+		\f No menu da tarefa selecionar a aba "Esforço";
+			\subf
+			\f Clicar no ícone "novo esforço";
+			\f Adicionar uma descrição ao esforço (opcional);
+			\f Iniciar monitoramento ou colocar data do início do monitoramento;
+			\voltaf
+	\end{fluxo}
+
+	%--------------------------------------------------
+	\atores{Apenas o usuário.}
+
+\end{funcionalidade}
+
+% ---
+% Para monitoramento de esforço
+% ---
+\begin{funcionalidade}{Parar Monitoramento de Esforço}
+
+	%--------------------------------------------------
+	\descricao{Ao clicar em "parar o esforço agora" ou em "parar" é dado uma data final para aquele esforço.}
+
+	%--------------------------------------------------
+	\importancia{media}
+
+	%--------------------------------------------------
+	\condicao
+	{
+		Existir uma tarefa;\newline
+		Existir um esforço inicializado;
+	} %pré-condição
+	{Esforço é registrado, com sua data inicial e data final.} %pós-condição
+
+	%--------------------------------------------------
+	\begin{fluxo}
+		\f Há uma tarefa na qual o usuário deseja trabalhar;
+		\f No menu da tarefa selecionar a aba "Esforço";
+			\subf
+			\f Selecionar um esforço em que deseja parar;
+			\f Ao clicar em "Parar esforço agora":
+				\subf
+				\f Esforço é parado com a data e hora atual;
+				\voltaf
+			\f Ao clicar em "Parar":
+				\subf
+				\f Uma data final deve ser dada;
+				\voltaf
+			\voltaf
 	\end{fluxo}
 
 	%--------------------------------------------------
