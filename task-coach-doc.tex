@@ -61,7 +61,6 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{caption}			% usado para alterar o tamanho da legenda
-\usepackage{makeidx} 			% index
 % ---
 % ---
 % Pacotes adicionais, usados no anexo do modelo de folha de identificação
@@ -74,6 +73,11 @@
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
 \usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% para usar o xindy ao invés do makeindex:
+\usepackage[xindy={language=portuguese},subentrycounter,seeautonumberlist,nonumberlist=true]{glossaries}
+
 % ---
 
 % ---
@@ -144,7 +148,8 @@ como requisito parcial para aprovação.}
 % informações do PDF
 \makeatletter
 \hypersetup{
-     	%pagebackref=true,
+	hypertexnames=true,
+     	pagebackref=true,
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
