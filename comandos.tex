@@ -21,11 +21,11 @@
 	%media
 	%baixa
 	\newcommand{\importancia}[1]{
-		\index{Importância}
 		\textbf{Importância:} 
-		\ifstrequal{##1}{alta}{\colorbox{red}{\color{white}\textbf{Alta}}}{}
-		\ifstrequal{##1}{media}{\colorbox{yellow}{\textbf{Média}}}{}
-		\ifstrequal{##1}{baixa}{\colorbox{gray}{Baixa}}{}
+		\ifstrequal{##1}{alta}{\index{Importância Alta}\colorbox{red}{\color{white}\textbf{Alta}}}{}
+		
+		\ifstrequal{##1}{media}{\index{Importância Média}\colorbox{yellow}{\textbf{Média}}}{}
+		\ifstrequal{##1}{baixa}{\index{Importância Baixa}\colorbox{gray}{Baixa}}{}
 	}
 
 	% ---
