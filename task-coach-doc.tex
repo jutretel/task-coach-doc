@@ -95,6 +95,9 @@
 % CONFIGURAÇÕES DE PACOTES
 % --- 
 
+
+%---------------------
+
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -111,6 +114,20 @@
 		Citado #1 vezes nas páginas #2.%
 	\fi}%
 % ---
+
+% ---
+% Links pra tabela de conteúdos
+% ---
+
+\let\oldcontentsline\contentsline%
+\renewcommand\contentsline[4]{%
+    \oldcontentsline{#1}{\smash{\raisebox{1em}{\hypertarget{toc#4}{}}}#2}{#3}{#4}}
+\newcommand\mychapter[1]{%
+    \chapter[#1]{\protect\hyperlink{tocchapter.\thechapter}{#1}}}
+\newcommand\mysection[1]{%
+    \section[#1]{\protect\hyperlink{tocsection.\thesection}{#1}}}
+\newcommand\mysubsection[1]{%
+    \subsection[#1]{\protect\hyperlink{tocsubsection.\thesubsection}{#1}}}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO

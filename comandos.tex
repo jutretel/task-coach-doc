@@ -9,7 +9,7 @@
 	% ---
 	\newcommand{\descricao}[1]{
 		\index{Descrição}
-		\section{Descrição}
+		\section[Descrição]{\protect\hyperlink{tocsection.\thesection}{Descrição}}
 
 		##1
 	}
@@ -36,7 +36,7 @@
 
 	\newcommand{\condicao}[2]{
 		\index{Condições}
-		\section{Condições}
+		\section[Condições]{\protect\hyperlink{tocsection.\thesection}{Condições}}
 		
 		\begin{table}[htb]
 			\captionsetup{font=scriptsize}
@@ -79,7 +79,7 @@
 			\end{enumerate}
 		}
 
-		\section{Fluxo de Execução}
+		\section[Fluxo de Execução]{\protect\hyperlink{tocsection.\thesection}{Fluxo de Execução}}
 		\index{Fluxo de Execução}
 		\begin{enumerate}
 	}
@@ -90,11 +90,11 @@
 
 	\newcommand{\atores}[1]{
 		\index{Atores}
-		\section{Atores}
+		\section[Atores]{\protect\hyperlink{tocsection.\thesection}{Atores}}
 		##1
 	}
 
-	\chapter{#1}
+	\chapter[#1]{\protect\hyperlink{tocchapter.\thechapter}{#1}}
 }
 %DEPOIS
 {
