@@ -1,3 +1,4 @@
+%--------------------------------------------------------------------
 %cinza pro baixa importancia
 \definecolor{gray}{gray}{0.75}
 
@@ -100,3 +101,15 @@
 {
 
 }
+
+%---------------------------------------------------------------
+\newcommand{\diagramadeclasse}[3]{
+	\chapter[#1]{\protect\hyperlink{tocchapter.\thechapter}{#1}}
+	
+	\begin{center}
+		\makebox[\textwidth]{
+		\includegraphics[#3]{./partes/diagrama-de-classes/pdf/#2}
+		}
+	\end{center}
+}
+
