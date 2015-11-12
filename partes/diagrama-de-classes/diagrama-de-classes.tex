@@ -1,18 +1,95 @@
 \part{Diagrama De Classes}
 
 \diagramadeclasse{Base (1/2)}{base_1.pdf}{width=.95\paperwidth}
-\diagramadeclasse{Base (2/2)}{base_1.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama contém classes genéricas de atributos e a classe Filter que será usada para filtrar categorias, tarefas e pesquisas realizadas.
+
+	Estão relacionadas com esse diagrama as funcionalidades 12 (Pesquisar Categoria) e 22 (Inserir Tarefa em uma ou mais Categorias).
+
+\diagramadeclasse{Base (2/2)}{base_2.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama contém as classes relacionadas à objetos genéricos e a classe Sorter, que tem função de decorar listas e ordenar seus componentes. 
+
 \diagramadeclasse{Tarefa}{task_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama possuí as classes básicas relacionadas à tarefas, além de classes relacionadas a lista de tarefas que serão criadas durante a execução do programa. 
+	
+	Estão relacionadas com esse diagrama as funcionalidades 1 (Criar Nova Tarefa), 2 (Editar Tarefa), 3 (Criar Subtarefas), 4 (Excluir Subtarefas). 
+
 \diagramadeclasse{Nova tarefa}{new_task_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama contém classes utilizadas no momento de criação de novas tarefas, além de classes que definem tarefas como parte de uma categoria e como dependência ou pre-requisito de outras tarefas. 
+	
+	Estão relacionadas com esse diagrama as funcionalidades 1 (Criar Nova Tarefa), 3 (Criar Subtarefa), 20 (Selecionar Pré-Requisitos) e 22 (Inserir Tarefa e uma ou mais Categorias).
+
 \diagramadeclasse{Categoria (1/2)}{category_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama estão as classes relacionadas às categorias, além das classes que representam as categorias como listas, o filtro e o ordenador de categorias.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 8 (Criar Nova Categoria), 9 (Criar Subcategoria), 10 (Editar Categoria), 11 (Excluir Categoria), 12 (Pesquisar Categoria) e 22 (Inserir Tarefa em uma ou mais Categorias).
+
 \diagramadeclasse{Categoria (2/2)}{catogory_2_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama estão algumas classes básicas que chamam os comandos relacionados a categorias, como resetar o filtro e adicionar nova categoria.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 8 (Criar Nova Categoria) e 12 (Pesquisar Categoria).
+
 \diagramadeclasse{Configurações}{config_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama estão representadas as classes de configurações genéricas, além de classes auxiliares (que analisam as configurações e as opções de aplicação).
+
 \diagramadeclasse{Data}{date_cortado.pdf}{width=.95\paperwidth}
-\diagramadeclasse{Esforço (1/2)}{effort_1.pdf}{width=.95\paperwidth}
-\diagramadeclasse{Esforço (2/2)}{effort_2.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama estão as classes que contém todo tipo de informação relacionada a datas e períodos.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 1 (Criar Nova Tarefa), 2 (Editar Tarefa), 3 (Criar Subtarefas), 17 (Iniciar Monitoramento de Esforço), 18 (Parar Monitoramento de Esforço), 19 (Alterar Datas da Tarefa) e 21 (Alterar Andamento da Tarefa).
+
+\diagramadeclasse{Esforço (1/2)}{effort_2.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	O diagrama mostra as classes que se relacionam com a opção de esforço de tarefas no programa e a listagem de esforços existentes.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 17 (Iniciar Monitoramento de Esforço) e 18 (Parar Monitoramento de Esforço).
+
+\diagramadeclasse{Esforço (2/2)}{effort_1.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama complementa o anterior, e contém classes mas específicas sobre a opção de esforço do programa.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 17 (Iniciar Monitoramento de Esforço) e 18 (Parar Monitoramento de Esforço). 
+
 \diagramadeclasse{Comandos de Entrada e Saída}{io_commands_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama estão representadas as classes relacionadas aos comandos de entrada e saída, ou seja, comandos de exportação para arquivos e importação de arquivos, além de salvar, abrir e mesclar projetos.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 5 (Salvar Projeto), 6 (Abrir Projeto), 13 (Mesclar Projetos), 14 (Importar Projetos) e 15 (Exportar Projetos).
+
 \diagramadeclasse{Notas}{note_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Nesse diagrama simples estão representadas as classes relacionadas às notas que podem ser adicionadas a tarefas ou categorias.
+	
+	Está relacionada com esse diagrama a funcionalidade 24 (Inserir Notas em Tarefas e em Categorias).
+
 \diagramadeclasse{Camada de Persistência (1/2)}{persistence_1.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama contém algumas classes relacionadas ao arquivo criado como projeto. Funções como salvar automáticamente e fazer backup de um projeto estão presentes nesse diagrama.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 5 (Salvar Projeto), 6 (Abrir Projeto) e 15 (Exportar Projetos).
+
 \diagramadeclasse{Camada de Persistência (2/2)}{persistence_2.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Outras classes relacionadas aos arquivos do programa estão presentes nesse diagrama. Classe de arquivos temporarios e de backup automático estão no diagrama.
+	
+	Estão relacionadas com esse diagrama as funcionalidades 5 (Salvar Projeto), 6 (Abrir Projeto) e 15 (Exportar Projetos).
+
 \diagramadeclasse{Linha do tempo}{timeline_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Esse diagrama contém as classes relacionadas com a timeline principal do programa, onde as tarefas irão aparecer e serão gerenciadas.
+	
+	Está relacionada com esse diagrama a funcionalidade 26 (Alterar a Aparência da Tarefa ou Categoria).
+
 \diagramadeclasse{Desfazer e Refazer}{undo_redo_cortado.pdf}{width=.95\paperwidth}
+\section{Descrição}
+	Essas duas classes implementam as funções de desfazer e refazer ações no programa.
+	
+	Está relacionada com esse diagrama a funcionalidade 16 (Desfazer/Refazer Ações).
+
+	
